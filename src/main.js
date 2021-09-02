@@ -20,6 +20,9 @@ import zhLocale from 'view-design/dist/locale/zh-CN';
 //  moment.js
 import moment from 'moment'
 
+// filters
+import filters from '@/filters'
+
 // v-charts
 // import VCharts from 'v-charts'
 
@@ -48,10 +51,29 @@ const messages = {
   }
 }
 
+// 注册一个全局自定义指令 `v-focus`
+Vue.directive('focus', {
+  // 当被绑定的元素插入到 DOM 中时……
+  inserted: function (el) {
+    // 聚焦元素
+    // children[0] element-UI的输入框中嵌套在div中
+    el.children[0].focus()
+  }
+})
+
+// 全局过滤器
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
+
+// 提供字符串形式的 Vue 安装版本号。这对社区的插件和组件来说非常有用，你可以根据不同的版本号采取不同的策略。
+// var version = Number(Vue.version.split('.')[0])
+// console.log(version);
+
 const i18n = new VueI18n({
   locale: 'zh', // 定义默认语言为中文 
   messages
-});
+})
 
 Vue.config.productionTip = false;
 

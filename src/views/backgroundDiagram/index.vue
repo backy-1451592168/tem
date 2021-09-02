@@ -1,0 +1,145 @@
+<template>
+  <div id="deviceNavigation">
+    <div class="homepage">
+      <div class="page-header-image"></div>
+      <div class="content-center">
+        <h1 class="time h1-seo">Backy</h1>
+        <h2>{{timeData}}</h2>
+      </div>
+    </div>
+    <div>
+      <div class="middle-content">
+        <div class="col-md">
+          <h2 class="title">Completed with examples</h2>
+          <div>
+            <div class="description">
+              <p>The kit comes with three pre-built pages to help you get started</p>
+              <p>faster. You can change the text and images and you're good to go.</p>
+              <p>More importantly, looking at them will give you a picture of what</p>
+              <p>you can built with this powerful Bootstrap 4 ui kit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section-signup">
+        <div class="container">
+          <div class="row">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+// import { Card } from '../../components.Card.vue';
+export default {
+  name: 'deviceNavigation',
+  components: {
+    // Card
+  },
+  data () {
+    this.timer = null
+    return {
+      timeData: ''
+    }
+  },
+  created () {
+    this.timer = setInterval(_ => {
+      this.timeData = this.$moment().format('YYYY-MM-YY HH:mm:ss')
+    }
+    , 1000)
+    // clearInterval(this.timer)
+  },
+  computed: {
+  },
+  methods: {
+  },
+  // 实例销毁之前调用
+  beforeDestroy () {
+    clearInterval(this.timer)
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+#deviceNavigation {
+  .time {
+    text-align: center;
+  }
+  .homepage {
+    height: 100vh;
+    .page-header-image{
+      position: absolute;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image:url('../../assets/img/header.jpg')
+    }
+    .content-center{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #FFFFFF;
+      padding: 0 15px;
+      width: 100%;
+      max-width: 500px;
+  
+      .h1-seo {
+        font-size: 3.8em;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+    }
+  }
+  .middle-content {
+    width: 100%;
+    text-align: center;
+    padding: 80px;
+    -webkit-box-pack: center !important;
+    justify-content: center !important;
+
+    .title {
+    font-weight: 700;
+    font-size: 2.5em;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    }
+
+    .description {
+      color: #9A9A9A;
+      font-weight: 300;
+    }
+  }
+
+  .section {
+    background-image: url('../../assets/img/bg11.jpg'); 
+    background-size: cover; 
+    background-position: top center; 
+    min-height: 700px;
+
+    .container {
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      text-align: center;
+      position: relative;
+
+      .row {
+        max-width: 350px;
+        background-color: #f96332;
+        height: 600px;
+        display: flex;
+      }
+    }
+  }
+}
+</style>

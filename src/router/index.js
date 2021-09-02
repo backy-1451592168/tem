@@ -51,6 +51,18 @@ const routes = [
     name: "chart",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/chart/index.vue"),
+  },
+  {
+    path: "/globalFiltering",
+    name: "globalFiltering",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/globalFiltering/index.vue"),
+  },
+  {
+    path: "/backgroundDiagram",
+    name: "backgroundDiagram",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/backgroundDiagram/index.vue"),
   }
 ];
 
