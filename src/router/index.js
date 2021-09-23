@@ -63,6 +63,12 @@ const routes = [
     name: "backgroundDiagram",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/backgroundDiagram/index.vue"),
+  },
+  {
+    path: "/scrollBar",
+    name: "scrollBar",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/scrollBar/index.vue"),
   }
 ];
 

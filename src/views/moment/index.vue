@@ -1,6 +1,7 @@
 <template>
   <div id="deviceNavigation">
     <h1 class="time">{{timeData}}</h1>
+    <i class="iconfont icon-ins"></i>
   </div>
 </template>
 

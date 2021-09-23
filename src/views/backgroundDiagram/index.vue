@@ -24,7 +24,20 @@
       <div class="section section-signup">
         <div class="container">
           <div class="row">
-
+            <div>
+              <h2>SIGN UP</h2>
+              <div>
+                <a>
+                  <i class="iconfont icon-ins"></i>
+                </a>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <p>邮箱:</p>
+                <button></button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -65,6 +78,13 @@ export default {
 
 <style lang="scss" scoped>
 #deviceNavigation {
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   .time {
     text-align: center;
   }
@@ -137,7 +157,30 @@ export default {
         max-width: 350px;
         background-color: #f96332;
         height: 600px;
-        display: flex;
+        margin: 0 auto;
+
+        ul {
+          margin-top: 50px;
+          display: inline-block;
+          li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            margin: 20px auto;
+
+            p {
+              font-size: 18px;
+            }
+
+            button {
+              width: 180px;
+              height: 30px;
+              border-radius: 10px;
+              border: 1px solid;
+            }
+          }
+        }
       }
     }
   }
