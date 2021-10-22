@@ -6,6 +6,7 @@
     <el-button type="success" plain><router-link to="/moment">时间组件</router-link></el-button>
     <el-button type="success" plain><router-link to="/videoPage">视频插件</router-link></el-button>
     <el-button type="success" plain><router-link to="/chart">chart图表</router-link></el-button>
+    <el-button type="success" plain><router-link to="/wenzi">文字一个个</router-link></el-button>
   </div>
 </template>
 

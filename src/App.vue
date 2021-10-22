@@ -2,6 +2,7 @@
   <div id="app">
     <Button type="dashed"><router-link to="/">Home </router-link></Button>
     <Button type="dashed"><router-link to="/about">富文本框</router-link></Button>
+    <!-- <keep-alive><router-view /></keep-alive> 本地缓存 就不会在走created了 -->
     <router-view />
   </div>
 </template>
