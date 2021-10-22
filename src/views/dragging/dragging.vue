@@ -6,6 +6,7 @@
       stripe
       border
       row-key="id"
+      height="280"
       align="left">
       <!-- <el-table-column
         type="index"
@@ -28,6 +29,7 @@
   </div>
 </template>
 <script>
+// npm install sortablejs --save
 import Sortable from 'sortablejs'
 export default {
   data() {
@@ -85,6 +87,36 @@ export default {
         },
         {
           id: '4',
+          date: '2016-05-03',
+          name: '王小虎四',
+          address: '上海市普陀区金沙江路 400 弄'
+        },
+        {
+          id: '5',
+          date: '2016-05-03',
+          name: '王小虎四',
+          address: '上海市普陀区金沙江路 400 弄'
+        },
+        {
+          id: '6',
+          date: '2016-05-03',
+          name: '王小虎四',
+          address: '上海市普陀区金沙江路 400 弄'
+        },
+        {
+          id: '7',
+          date: '2016-05-03',
+          name: '王小虎四',
+          address: '上海市普陀区金沙江路 400 弄'
+        },
+        {
+          id: '8',
+          date: '2016-05-03',
+          name: '王小虎四',
+          address: '上海市普陀区金沙江路 400 弄'
+        },
+        {
+          id: '9',
           date: '2016-05-03',
           name: '王小虎四',
           address: '上海市普陀区金沙江路 400 弄'

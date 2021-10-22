@@ -23,6 +23,8 @@ import moment from 'moment'
 // filters
 import filters from '@/filters'
 
+// import VueTypedJs from 'vue-typed-js'
+// Vue.use(VueTypedJs)
 // v-charts
 // import VCharts from 'v-charts'
 

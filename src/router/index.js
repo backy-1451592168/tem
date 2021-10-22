@@ -20,7 +20,7 @@ const routes = [
     path: "/dragging",
     name: "dragging",
     component: () =>
-      import(/* webpackChunkName: "dragging" */ "../views/testss/dragging.vue"),
+      import(/* webpackChunkName: "dragging" */ "../views/dragging/dragging.vue"),
   },
   {
     path: "/zhen",
@@ -69,6 +69,18 @@ const routes = [
     name: "scrollBar",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/scrollBar/index.vue"),
+  },
+  {
+    path: "/scrollrandl",
+    name: "scrollrandl",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/scrollrandl/index.vue"),
+  },
+  {
+    path: "/lottie",
+    name: "lottie",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/lottie/index.vue"),
   }
 ];
 
