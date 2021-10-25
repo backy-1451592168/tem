@@ -1,41 +1,46 @@
 <template>
-  <div id="deviceNavigation">
-    <h1 class="time">{{timeData}}</h1>
-    <i class="iconfont icon-ins"></i>
+  <div id="lottie">
+    <div ref="bodyAnimation"></div>
   </div>
 </template>
 
 <script>
+// npm install lottie-web -S
+import lottie from 'lottie-web';
+// 动画地址 https://lottiefiles.com/81296-success?lang=zh_CN ， https://codepen.io/collection/nVYWZR/
+// 本地导入
+// import sheepJson from '@/assets/81296-success.json';
 export default {
-  name: 'deviceNavigation',
+  name: 'lottie',
+  components: {
+    lottie
+  },
   data () {
-    this.timer = null
     return {
-      timeData: ''
     }
   },
   created () {
-    this.timer = setInterval(_ => {
-      this.timeData = this.$moment().format('YYYY-MM-YY HH:mm:ss')
-    }
-    , 1000)
-    // clearInterval(this.timer)
+  },
+  // 一般在初始化页面完成后，再对dom节点进行相关操作
+  mounted() {
+    lottie.loadAnimation({
+      container: this.$refs.bodyAnimation, // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      // animationData: sheepJson // the path to the animation json
+      path: 'https://labs.nearpod.com/bodymovin/demo/markus/isometric/markus2.json'
+    });
   },
   computed: {
   },
   methods: {
-  },
-  // 实例销毁之前调用
-  beforeDestroy () {
-    clearInterval(this.timer)
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#deviceNavigation {
-  .time {
-    text-align: center;
-  }
+#lottie {
+  width: 200px;
 }
 </style>

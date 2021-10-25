@@ -1,7 +1,7 @@
 <template>
   <div id="deviceNavigation">
     <div class="homepage">
-      <div class="page-header-image"></div>
+      <div class="page-header-image" ref="pageHeaderImage"></div>
       <div class="content-center">
         <h1 class="time h1-seo">Backy</h1>
         <h2>{{timeData}}</h2>
@@ -55,7 +55,8 @@ export default {
   data () {
     this.timer = null
     return {
-      timeData: ''
+      timeData: '',
+      inde: 0
     }
   },
   created () {
@@ -65,9 +66,26 @@ export default {
     , 1000)
     // clearInterval(this.timer)
   },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll, true); //监听滚动事件
+  },
   computed: {
   },
   methods: {
+    // 获取滚动条距离顶部高度
+    handleScroll(e) {
+      // console.log(e);
+      // 方法一
+      var top = Math.floor(document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset)
+      // console.log(top)
+      console.log(this.inde);
+      console.log(top);
+      // 方法二
+      // this.$nextTick(()=>{
+      //   var top = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset
+      //   console.log(top)
+      // })
+    }
   },
   // 实例销毁之前调用
   beforeDestroy () {
@@ -97,7 +115,12 @@ export default {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background-image:url('../../assets/img/header.jpg')
+      background-image:url('../../assets/img/header.jpg');
+      // 高斯模糊
+      -webkit-filter: blur(3px);
+         -moz-filter: blur(3px);
+          -ms-filter: blur(3px);    
+              filter: blur(3px);
     }
     .content-center{
       position: absolute;

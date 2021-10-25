@@ -21,6 +21,7 @@
 </template>
 
 <script>
+// https://www.npmjs.com/package/vue-typed-js
 import { VueTypedJs } from 'vue-typed-js'
 export default {
   name: 'deviceNavigation',
