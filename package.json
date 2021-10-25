@@ -19,7 +19,6 @@
     "view-design": "^4.6.1",
     "vue": "^2.6.11",
     "vue-i18n": "^8.22.1",
-    "vue-lottie": "^0.2.1",
     "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.2.0",
     "vue-typed-js": "^0.1.2",
