@@ -10,7 +10,7 @@
     <el-button type="success" plain><router-link to="/BackgroundDiagram">背景图</router-link></el-button>
     <el-button type="success" plain><router-link to="/scrollBar">滚动条自动滚动</router-link></el-button>
     <el-button type="success" plain><router-link to="/scrollrandl">文字渐出</router-link></el-button>
-    <el-button type="success" plain><router-link to="/lottie">动画</router-link></el-button>
+    <el-button type="success" plain><router-link to="/lottie" class="lottie">动画</router-link></el-button>
   </div>
 </template>
 
@@ -24,4 +24,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.lottie {
+  font-size: 1rem;;
+}
 </style>
