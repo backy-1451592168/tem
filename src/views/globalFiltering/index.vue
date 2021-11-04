@@ -1,7 +1,8 @@
 <template>
   <div id="globalFiltering">
     <!-- 自定义过滤器 -->
-    <h1 class="time">{{8956.889 | toFixed(2)}}</h1>
+    8956.88999变成8956.89
+    <h1 class="time">{{8956.88999 | toFixed(2)}}</h1>
     <h1 class="time">{{896656.889 | numberFormat(2)}}</h1>
     {{data_list.length}}
     <div class="table_style" >
@@ -16,56 +17,6 @@
             <td></td>
           </tr>
         </table>
-        <!-- <table class="tab">
-          <tr>
-            <td colspan="3"></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-        <table class="tab">
-          <tr>
-            <td colspan="3"></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-        <table class="tab">
-          <tr>
-            <td colspan="3"></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-        <table class="tab">
-          <tr>
-            <td colspan="3"></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-        <table class="tab">
-          <tr>
-            <td colspan="3"></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table> -->
       </div>
     </div>
   </div>

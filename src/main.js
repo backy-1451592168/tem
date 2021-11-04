@@ -23,6 +23,9 @@ import moment from 'moment'
 // filters
 import filters from '@/filters'
 
+//使用产线组件
+import quanPing from '@/components/quanping.vue'
+Vue.component("quanPing",quanPing)
 
 // import VueTypedJs from 'vue-typed-js'
 // Vue.use(VueTypedJs)

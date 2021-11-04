@@ -12,6 +12,7 @@
     "core-js": "^3.6.5",
     "echarts": "^4.9.0",
     "element-ui": "^2.15.1",
+    "jsqr": "^1.4.0",
     "lottie-web": "^5.7.14",
     "moment": "^2.29.1",
     "v-charts": "^1.19.0",
