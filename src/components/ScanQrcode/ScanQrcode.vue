@@ -47,10 +47,12 @@ let animationFrameId = null
 export default {
   // 父向子传递的值，控制弹框的显示或隐藏
   props: {
+    // 开与关
     show: {
       type: Boolean,
       required: true
     },
+    // 单条还是多条
     multiple: {
       type: Boolean,
       default: false

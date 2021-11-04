@@ -4,7 +4,7 @@
     <i class="iconfont icon-ins"></i>
     <el-button plain @click="showScanQrCode = true">扫码</el-button>
     {{code}}
-    <scan-qrcode :show="showScanQrCode" @getCodeList="getCodeList" />
+    <scan-qrcode :show="showScanQrCode" multiple @getCodeList="getCodeList" />
   </div>
 </template>
 
