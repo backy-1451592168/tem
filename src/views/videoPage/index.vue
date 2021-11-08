@@ -144,7 +144,8 @@ export default {
     .video {
       margin: 10px 180px;
     }
-    /deep/.vjs-big-play-button {
+    // 解决scss版本太高报错 因为截图插件需要高版本scss
+    ::v-deep.vjs-big-play-button {
       top: 45%;
       left: 45%;
     }
@@ -153,7 +154,7 @@ export default {
     .video {
       margin: 0;
     }
-    /deep/.vjs-big-play-button {
+    ::v-deep .vjs-big-play-button {
       top: 38%;
       left: 38%;
     }

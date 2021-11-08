@@ -38,6 +38,7 @@ export default {
         } else {
           num = a - b
         }
+        // 父组件该执行 @childFn=“”里面的函数了
       this.$emit('childFn', num);
     }
   }    

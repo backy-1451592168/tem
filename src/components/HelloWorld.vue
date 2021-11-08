@@ -8,9 +8,10 @@
     <el-button type="success" plain><router-link to="/chart">6.chart图表</router-link></el-button>
     <el-button type="success" plain><router-link to="/globalFiltering">7.数字 单位处理</router-link></el-button>
     <el-button type="success" plain><router-link to="/BackgroundDiagram">背景图</router-link></el-button>
-    <el-button type="success" plain><router-link to="/scrollBar">8.滚动条自动滚动</router-link></el-button>
+    <el-button type="success" plain><router-link to="/scrollBar">8.滚动条自动滚动 鼠标滚轮div左右滚动</router-link></el-button>
     <el-button type="success" plain><router-link to="/scrollrandl">9.文字渐出</router-link></el-button>
     <el-button type="success" plain><router-link to="/lottie" class="lottie">10.动画 rem</router-link></el-button>
+    <el-button type="success" plain><router-link to="/crop" class="lottie">11.图片裁剪</router-link></el-button>
     <!-- 11.全屏 -->
     <quan-ping></quan-ping>
 

@@ -81,6 +81,12 @@ const routes = [
     name: "lottie",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/lottie/index.vue"),
+  },
+  {
+    path: "/crop",
+    name: "crop",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/crop/index.vue"),
   }
 ];
 

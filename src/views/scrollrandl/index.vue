@@ -43,11 +43,12 @@ export default {
 
 <style lang="scss" scoped>
 #deviceNavigation {
-  }
-  /deep/.typing {
+  padding: 0;
+}
+  ::v-deep.typing {
     margin-top: 6px;
   }
-  /deep/.typed-cursor {
+  ::v-deep.typed-cursor {
     font-size: 45px;
   }
 </style>
