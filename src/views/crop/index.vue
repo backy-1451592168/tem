@@ -1,4 +1,5 @@
 <template>
+<!-- 图片裁剪 -->
   <div class="cropper-content">
     <div class="cropper-box">
       <div class="cropper">

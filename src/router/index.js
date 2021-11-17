@@ -87,6 +87,18 @@ const routes = [
     name: "crop",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/crop/index.vue"),
+  },
+  {
+    path: "/button",
+    name: "button",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/button/index.vue"),
+  },
+  {
+    path: "/gradient",
+    name: "gradient",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/gradient/index.vue"),
   }
 ];
 
