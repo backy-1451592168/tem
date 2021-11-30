@@ -1,5 +1,7 @@
 <template>
   <div id="deviceNavigation">
+    <!-- 声音 -->
+    <audio controls="controls" src="@/assets/notice.wav" hidden="true" ref="audio"></audio>
     <h1 class="time">{{timeData}}</h1>
     <i class="iconfont icon-ins"></i>
     <el-button plain @click="showScanQrCode = true">扫码</el-button>
@@ -35,6 +37,7 @@ export default {
   created () {
     this.timer = setInterval(_ => {
       this.timeData = this.$moment().format('YYYY-MM-YY HH:mm:ss')
+      // this.music()
     }
     , 1000)
     // clearInterval(this.timer)
@@ -64,9 +67,17 @@ export default {
         // 释放内存
         clipboard.destroy()
       })
+    },
+    
+    music() {
+      // 调取声音
+      this.$refs.audio.currentTime = 0
+      this.$refs.audio.play()
     }
   },
-
+  updated() {
+    // this.music()
+  },
   // 实例销毁之前调用
   beforeDestroy () {
     clearInterval(this.timer)

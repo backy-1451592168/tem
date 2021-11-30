@@ -99,6 +99,12 @@ const routes = [
     name: "gradient",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/gradient/index.vue"),
+  },
+  {
+    path: "/countDown",
+    name: "countDown",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/countDown/index.vue"),
   }
 ];
 
