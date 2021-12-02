@@ -3,7 +3,7 @@
     <el-button type="success" plain><router-link to="/dragging">1.拖拽组件 全屏</router-link></el-button>
     <el-button type="success" plain><router-link to="/zhen">2.中英文切换</router-link></el-button>
     <el-button type="success" plain><router-link to="/element">element组件</router-link></el-button>
-    <el-button type="success" plain><router-link to="/moment">3-4.时间组件 扫码组件 一键复制时间 声音</router-link></el-button>
+    <el-button type="success" plain><router-link to="/moment">3-4.时间组件 扫码组件 一键复制时间 声音 桌面消息通知</router-link></el-button>
     <el-button type="success" plain><router-link to="/videoPage">5.视频插件</router-link></el-button>
     <el-button type="success" plain><router-link to="/chart">6.chart图表</router-link></el-button>
     <el-button type="success" plain><router-link to="/globalFiltering">7.数字 单位处理</router-link></el-button>
