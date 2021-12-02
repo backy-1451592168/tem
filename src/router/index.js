@@ -105,6 +105,12 @@ const routes = [
     name: "countDown",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/countDown/index.vue"),
+  },
+  {
+    path: "/verification",
+    name: "verification",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/verification/index.vue"),
   }
 ];
 

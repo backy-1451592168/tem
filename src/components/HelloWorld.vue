@@ -15,6 +15,7 @@
     <el-button type="success" plain><router-link to="/button">12.导航栏收合按钮</router-link></el-button>
     <el-button type="success" plain><router-link to="/gradient">13.模仿M1芯片渐变效果</router-link></el-button>
     <el-button type="success" plain><router-link to="/countDown">14.倒计时</router-link></el-button>
+    <el-button type="success" plain><router-link to="/verification">15.验证码</router-link></el-button>
     <!-- 11.全屏 -->
     <quan-ping></quan-ping>
 
