@@ -111,6 +111,12 @@ const routes = [
     name: "verification",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/verification/index.vue"),
+  },
+  {
+    path: "/resize",
+    name: "resize",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/resize/index.vue"),
   }
 ];
 

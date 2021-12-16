@@ -35,7 +35,6 @@ Vue.component("quanPing",quanPing)
 // import 'v-charts/lib/style.css'
 // Vue.use(VCharts)
 
-
 Vue.use(ElementUI)
 Vue.use(ViewUI)
 Vue.use(VueI18n)
