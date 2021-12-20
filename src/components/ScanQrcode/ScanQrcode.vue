@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="ScanQrcode">
     <el-dialog
       customClass="dialog"
       title="扫描二维码"
@@ -175,9 +175,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/deep/ .dialog {
-  width: 800px;
-} 
+  ::v-deep .dialog {
+    width: 800px;
+  } 
 .container {
   display: flex;
   .scan-wrap {

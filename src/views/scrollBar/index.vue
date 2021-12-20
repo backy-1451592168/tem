@@ -10,6 +10,10 @@
       </div>
       <div ref="child2" id="child2" class="child"></div>
     </div>
+
+    <div ref="scrollContainer" @mousewheel="MouseWheel" style="overflow: scroll;">
+      <div style="width: 5000px; background: #000; height: 50px;"></div>
+    </div>
   </div>
 </template>
 
@@ -40,6 +44,14 @@ export default {
           parent.scrollTop++
         }
       }, 20)
+    },
+    // 鼠标滚轮 控制div左右滚动
+    MouseWheel(e){
+      let eventDelta = -e.wheelDelta || -e.deltaY * 40
+      let $scrollWrapper = this.$refs.scrollContainer
+      // console.log($scrollWrapper.scrollLeft)
+      // 0到scrollLeft为滚动区域隐藏部分
+      $scrollWrapper.scrollLeft = $scrollWrapper.scrollLeft + eventDelta / 4
     }
   },
   // 实例销毁之前调用

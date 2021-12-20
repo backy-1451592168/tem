@@ -3,14 +3,20 @@
     <el-button type="success" plain><router-link to="/dragging">1.拖拽组件 全屏</router-link></el-button>
     <el-button type="success" plain><router-link to="/zhen">2.中英文切换</router-link></el-button>
     <el-button type="success" plain><router-link to="/element">element组件</router-link></el-button>
-    <el-button type="success" plain><router-link to="/moment">3-4.时间组件 扫码组件</router-link></el-button>
+    <el-button type="success" plain><router-link to="/moment">3-4.时间组件 扫码组件 一键复制时间 声音 桌面消息通知</router-link></el-button>
     <el-button type="success" plain><router-link to="/videoPage">5.视频插件</router-link></el-button>
     <el-button type="success" plain><router-link to="/chart">6.chart图表</router-link></el-button>
     <el-button type="success" plain><router-link to="/globalFiltering">7.数字 单位处理</router-link></el-button>
     <el-button type="success" plain><router-link to="/BackgroundDiagram">背景图</router-link></el-button>
-    <el-button type="success" plain><router-link to="/scrollBar">8.滚动条自动滚动</router-link></el-button>
+    <el-button type="success" plain><router-link to="/scrollBar">8.滚动条自动滚动 鼠标滚轮div左右滚动</router-link></el-button>
     <el-button type="success" plain><router-link to="/scrollrandl">9.文字渐出</router-link></el-button>
-    <el-button type="success" plain><router-link to="/lottie" class="lottie">10.动画 rem</router-link></el-button>
+    <el-button type="success" plain><router-link to="/lottie" class="lottie">10.动画 防抖节流 rem</router-link></el-button>
+    <el-button type="success" plain><router-link to="/crop">11.图片裁剪</router-link></el-button>
+    <el-button type="success" plain><router-link to="/button">12.导航栏收合按钮</router-link></el-button>
+    <el-button type="success" plain><router-link to="/gradient">13.模仿M1芯片渐变效果</router-link></el-button>
+    <el-button type="success" plain><router-link to="/countDown">14.倒计时</router-link></el-button>
+    <el-button type="success" plain><router-link to="/verification">15.验证码</router-link></el-button>
+    <el-button type="success" plain><router-link to="/resize">16.自定义拖拽布局</router-link></el-button>
     <!-- 11.全屏 -->
     <quan-ping></quan-ping>
 
@@ -34,17 +40,19 @@ export default {
     msg: String,
   },
   components: { testCom },
-    data() {
-        return {
-          message: 0,
-          sta: true
-        }
-    },
-    methods: {
-       parentFn(payload) {
-        this.message = payload;
+  data() {
+      return {
+        message: 0,
+        sta: true
       }
-    }
+  },
+  created () {
+  },
+  methods: {
+    parentFn(payload) {
+      this.message = payload;
+    },
+  }
 };
 </script>
 

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "clipboard": "^2.0.8",
     "core-js": "^3.6.5",
     "echarts": "^4.9.0",
     "element-ui": "^2.15.1",
@@ -19,6 +20,9 @@
     "v-echarts": "^1.0.2",
     "view-design": "^4.6.1",
     "vue": "^2.6.11",
+    "vue-cropper": "^0.5.7",
+    "vue-drag-resize": "^1.5.4",
+    "vue-grid-layout": "^2.3.12",
     "vue-i18n": "^8.22.1",
     "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.2.0",

@@ -85,6 +85,42 @@ const routes = [
     name: "lottie",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/lottie/index.vue"),
+  },
+  {
+    path: "/crop",
+    name: "crop",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/crop/index.vue"),
+  },
+  {
+    path: "/button",
+    name: "button",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/button/index.vue"),
+  },
+  {
+    path: "/gradient",
+    name: "gradient",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/gradient/index.vue"),
+  },
+  {
+    path: "/countDown",
+    name: "countDown",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/countDown/index.vue"),
+  },
+  {
+    path: "/verification",
+    name: "verification",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/verification/index.vue"),
+  },
+  {
+    path: "/resize",
+    name: "resize",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/resize/index.vue"),
   }
 ];
 
