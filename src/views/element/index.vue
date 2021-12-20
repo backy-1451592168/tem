@@ -9,7 +9,11 @@
       </ul>
       <p v-if="loading">加载中...</p>
       <p v-if="noMore">没有更多了</p>
-  </div>
+    </div>
+    <div style="margin: 20px;">
+      <!-- 聚焦 -->
+      <el-input v-focus style="width: 100px;"></el-input>
+    </div>
   </div>
 </template>
 

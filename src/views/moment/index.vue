@@ -2,17 +2,26 @@
   <div id="deviceNavigation">
     <el-input v-model="qwe"></el-input>
     <h1 class="time">{{timeData}}</h1>
+    <i class="iconfont icon-ins"></i>
+    <el-button plain @click="showScanQrCode = true">扫码</el-button>
+    {{code}}
+    <scan-qrcode :show="showScanQrCode" multiple @getCodeList="getCodeList" />
   </div>
 </template>
 
 <script>
+import ScanQrcode from '@/components/ScanQrcode/ScanQrcode.vue'
 export default {
   name: 'deviceNavigation',
+  // 注册组件
+  components: { ScanQrcode },
   data () {
     this.timer = null
     return {
       qwe: "",
-      timeData: ''
+      timeData: '',
+      showScanQrCode: false,
+      code: ''
     }
   },
   created () {
@@ -26,6 +35,12 @@ export default {
   computed: {
   },
   methods: {
+    // 扫二维码
+    getCodeList(list) {
+      this.showScanQrCode = false
+      if (!list.length) return
+      this.code = list[0]
+    }
   },
   // 实例销毁之前调用
   beforeDestroy () {

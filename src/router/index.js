@@ -20,7 +20,7 @@ const routes = [
     path: "/dragging",
     name: "dragging",
     component: () =>
-      import(/* webpackChunkName: "dragging" */ "../views/testss/dragging.vue"),
+      import(/* webpackChunkName: "dragging" */ "../views/dragging/dragging.vue"),
   },
   {
     path: "/zhen",
@@ -57,6 +57,34 @@ const routes = [
     name: "wenzi",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/wenzi/index.vue"),
+    path: "/globalFiltering",
+    name: "globalFiltering",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/globalFiltering/index.vue"),
+  },
+  {
+    path: "/backgroundDiagram",
+    name: "backgroundDiagram",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/backgroundDiagram/index.vue"),
+  },
+  {
+    path: "/scrollBar",
+    name: "scrollBar",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/scrollBar/index.vue"),
+  },
+  {
+    path: "/scrollrandl",
+    name: "scrollrandl",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/scrollrandl/index.vue"),
+  },
+  {
+    path: "/lottie",
+    name: "lottie",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/lottie/index.vue"),
   }
 ];
 
