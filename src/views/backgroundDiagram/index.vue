@@ -1,7 +1,7 @@
 <template>
   <div id="deviceNavigation">
     <div class="homepage">
-      <div class="page-header-image" ref="pageHeaderImage"></div>
+      <div class="page-header-image"></div>
       <div class="content-center">
         <h1 class="time h1-seo">Backy</h1>
         <h2>{{timeData}}</h2>

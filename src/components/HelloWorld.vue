@@ -17,6 +17,8 @@
     <el-button type="success" plain><router-link to="/countDown">14.倒计时</router-link></el-button>
     <el-button type="success" plain><router-link to="/verification">15.验证码</router-link></el-button>
     <el-button type="success" plain><router-link to="/resize">16.自定义拖拽布局</router-link></el-button>
+    <el-button type="success" plain><router-link to="/barcode">17.生成条形码</router-link></el-button>
+    <el-button type="success" plain><router-link to="/storeView">18.Vuex</router-link></el-button>
     <!-- 11.全屏 -->
     <quan-ping></quan-ping>
 
@@ -26,6 +28,8 @@
         <el-radio-button :label="true">+</el-radio-button>
         <el-radio-button :label="false">-</el-radio-button>
       </el-radio-group>
+
+      <!-- 渲染组件 -->
       <test-com @childFn="parentFn" :status="sta"></test-com>
       运算后的值 : {{message}}
     </div>
@@ -33,12 +37,11 @@
 </template>
 
 <script>
+// 父子组件通信 文件位置
 import testCom from '@/components/zujian/zi.vue'
 export default {
   name: "HelloWorld",
-  props: {
-    msg: String,
-  },
+  
   components: { testCom },
   data() {
       return {

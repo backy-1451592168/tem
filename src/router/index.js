@@ -121,6 +121,18 @@ const routes = [
     name: "resize",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/resize/index.vue"),
+  },
+  {
+    path: "/barcode",
+    name: "barcode",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/barCode/index.vue"),
+  },
+  {
+    path: "/storeView",
+    name: "storeView",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/storeView/index.vue"),
   }
 ];
 

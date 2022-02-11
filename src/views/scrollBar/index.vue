@@ -1,6 +1,6 @@
 <template>
   <div id="scrollBar">
-    <div ref="parent" id="parent" class="parent">
+    <div ref="parent" id="parent" class="parent" @mouseenter="enter" @mouseleave="leave">
       <div ref="child1" id="child1" class="child">
         <li>1</li>
         <li>2</li>
@@ -22,6 +22,7 @@ export default {
   name: 'scrollBar',
   data () {
     return {
+      timer: null
     }
   },
   created () {
@@ -33,11 +34,11 @@ export default {
   },
   methods: {
     init () {
-      var parent = this.$refs.parent
-      var child1 = this.$refs.child1
-      var child2 = this.$refs.child2
+      let parent = this.$refs.parent
+      let child1 = this.$refs.child1
+      let child2 = this.$refs.child2
       child2.innerHTML = child1.innerHTML
-      setInterval(()=> {
+      this.timer = setInterval(()=> {
         if(parent.scrollTop >= child1.scrollHeight) {
           parent.scrollTop = 0;
         } else {
@@ -45,6 +46,20 @@ export default {
         }
       }, 20)
     },
+
+    // 移入
+    enter () {
+      console.log(1);
+      clearInterval(this.timer)
+    },
+    // 移出
+    leave () {
+      console.log(2);
+      clearInterval(this.timer)
+      this.init()
+    },
+
+
     // 鼠标滚轮 控制div左右滚动
     MouseWheel(e){
       let eventDelta = -e.wheelDelta || -e.deltaY * 40

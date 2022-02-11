@@ -96,8 +96,8 @@ export default {
       const videoParam = { video: { facingMode: "environment" } }
       navigator.mediaDevices.getUserMedia(videoParam).then((stream) => {
         this.video.srcObject = stream
-        this.video.setAttribute('playsinline', true) // required to tell iOS safari we don't want fullscreen
-        this.video.setAttribute('autoplay', true) // required to tell iOS safari we don't want fullscreen
+        this.video.setAttribute('playsinline', true) // 需要告诉 iOS Safari 我们不想要全屏
+        this.video.setAttribute('autoplay', true) // 需要告诉 iOS Safari 我们不想要全屏
         this.video.play()
         animationFrameId = requestAnimationFrame(this.tick)
       }).catch(err => {
