@@ -10,7 +10,7 @@ export default new Vuex.Store({
     city:"城市名"
   },
 
-  // 提供用来获取state数据的 方法  可以认为是 store 的计算属性
+  // 提供用来获取state数据的 方法  可以认为是 store 的计算属性 监听
   getters: {
     getStoreDataFn: state => {
       return state.store_data
@@ -24,7 +24,7 @@ export default new Vuex.Store({
     },
 
     setCity(state, name){
-      state.city = name;//将传参设置给state的city
+      state.city = name; //将传参设置给state的city
   }
   },
 

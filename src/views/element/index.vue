@@ -5,14 +5,16 @@
         class="list"
         v-infinite-scroll="load"
         infinite-scroll-disabled="disabled">
-        <li v-for="i in count" class="list-item">{{ i }}</li>
+        <li v-for="i in count" class="list-item" :key="i">{{ i }}</li>
       </ul>
       <p v-if="loading">加载中...</p>
       <p v-if="noMore">没有更多了</p>
     </div>
     <div style="margin: 20px;">
       <!-- 聚焦 -->
-      <el-input v-focus style="width: 100px;"></el-input>
+      <el-input v-focus v-model="count" style="width: 100px;"></el-input>
+      
+      <input type="text" v-has="num">{{num}}
     </div>
   </div>
 </template>
@@ -22,6 +24,7 @@ export default {
   name: 'deviceNavigation',
   data () {
     return {
+      num: false,
       count: 10,
       loading: false
     }

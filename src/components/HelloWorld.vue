@@ -19,6 +19,16 @@
     <el-button type="success" plain><router-link to="/resize">16.自定义拖拽布局</router-link></el-button>
     <el-button type="success" plain><router-link to="/barcode">17.生成条形码</router-link></el-button>
     <el-button type="success" plain><router-link to="/storeView">18.Vuex</router-link></el-button>
+    <el-button type="success" plain><router-link to="/map">19.地图</router-link></el-button>
+    <el-button type="success" plain><router-link to="/testss">19.test</router-link></el-button>
+    <el-button type="success" plain><router-link to="/line">20.line</router-link></el-button>
+    <el-button type="success" plain><router-link to="/indexCopy">21.indexCopy</router-link></el-button>
+    <el-button type="success" plain><router-link to="/elProgress">22.elProgress</router-link></el-button>
+    <el-button type="success" plain><router-link to="/testLine">23.testLine</router-link></el-button>
+    <el-button type="success" plain><router-link to="/echartsMap">24.echarts-map</router-link></el-button>
+    <el-button type="success" plain><router-link to="/test">24.echarts-map</router-link></el-button>
+    <el-button type="success" plain><router-link to="/filtration">24.filtration-jiao</router-link></el-button>
+    <el-button type="success" plain><router-link to="/miaomiao">24.filtration-miaomiao</router-link></el-button>
     <!-- 11.全屏 -->
     <quan-ping></quan-ping>
 
@@ -30,7 +40,7 @@
       </el-radio-group>
 
       <!-- 渲染组件 -->
-      <test-com @childFn="parentFn" :status="sta"></test-com>
+      <test-com ref="testCom" @childFn="parentFn" :status="sta"></test-com>
       运算后的值 : {{message}}
     </div>
   </div>
@@ -54,6 +64,8 @@ export default {
   methods: {
     parentFn(payload) {
       this.message = payload;
+      // 父组件调子方法
+      console.log(this.$refs.testCom);
     },
   }
 };

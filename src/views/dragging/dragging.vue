@@ -10,7 +10,8 @@
     <quan-ping></quan-ping>
 
     <template v-if="plan === 1">
-      <el-table :data="tableData"
+      <el-table
+        :data="tableData"
         :header-cell-style="tableHeaderStyle"
         stripe
         border
@@ -39,7 +40,7 @@
     <template v-else>
       <!-- 拖拽组件 -->
       <draggable animation="300" v-model="dataList" :disabled="false">
-        <div v-for="item in dataList" class="testss">
+        <div v-for="item in dataList" class="testss" :key="item">
           {{item}}
         </div>
       </draggable>

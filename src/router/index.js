@@ -133,6 +133,66 @@ const routes = [
     name: "storeView",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/storeView/index.vue"),
+  },
+  {
+    path: "/map",
+    name: "map",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/map/index.vue"),
+  },
+  {
+    path: "/testss",
+    name: "testss",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/testss/index.vue"),
+  },
+  {
+    path: "/line",
+    name: "line",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/line/index.vue"),
+  },
+  {
+    path: "/indexCopy",
+    name: "indexCopy",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/line/indexCopy.vue"),
+  },
+  {
+    path: "/elProgress",
+    name: "elProgress",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/elProgress/index.vue"),
+  },
+  {
+    path: "/testLine",
+    name: "testLine",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/line/testLine.vue"),
+  },
+  {
+    path: "/echartsMap",
+    name: "echartsMap",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/echartsMap/index.vue"),
+  },
+  {
+    path: "/test",
+    name: "test",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/test/index.vue"),
+  },
+  {
+    path: "/filtration",
+    name: "filtration",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/filtration/index.vue"),
+  },
+  {
+    path: "/miaomiao",
+    name: "miaomiao",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/filtration/miaomiao.vue"),
   }
 ];
 

@@ -38,7 +38,7 @@ export default {
         } else {
           num = a - b
         }
-        // 父组件该执行 @childFn=“”里面的函数了
+        // 父组件该执行 @childFn=“”里面的函数了 触发父组件函数 并传参给父组件
       this.$emit('childFn', num);
     }
   }    
