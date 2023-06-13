@@ -29,6 +29,12 @@
     <el-button type="success" plain><router-link to="/test">24.echarts-map</router-link></el-button>
     <el-button type="success" plain><router-link to="/filtration">24.filtration-jiao</router-link></el-button>
     <el-button type="success" plain><router-link to="/miaomiao">24.filtration-miaomiao</router-link></el-button>
+    <el-button type="success" plain><router-link to="/vuemap_vue_amap">25.@vuemap/vue-amap</router-link></el-button>
+    <el-button type="success" plain><router-link to="/watermarking">26.watermarking</router-link></el-button>
+    <el-button type="success" plain><router-link to="/lineDemo">27.Line</router-link></el-button>
+    <el-button type="success" plain><router-link to="/time">28.time</router-link></el-button>
+    <el-button type="success" plain><router-link to="/jsplumb">29.jsplumb</router-link></el-button>
+    <el-button type="success" plain><router-link to="/ts">29.ts</router-link></el-button>
     <!-- 11.全屏 -->
     <quan-ping></quan-ping>
 

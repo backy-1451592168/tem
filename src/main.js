@@ -30,8 +30,13 @@ import filters from '@/filters'
 import quanPing from '@/components/quanping.vue'
 Vue.component("quanPing",quanPing)
 
-
-
+import VueAMap from '@vuemap/vue-amap';
+import '@vuemap/vue-amap/dist/style.css'
+Vue.use(VueAMap);
+VueAMap.initAMapApiLoader({
+  key: 'ef3140368089d422931058dcd945f2f0',
+});
+Vue.use(VueAMap)
 // import VueTypedJs from 'vue-typed-js'
 // Vue.use(VueTypedJs)
 // v-charts

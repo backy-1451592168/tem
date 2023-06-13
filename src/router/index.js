@@ -193,6 +193,42 @@ const routes = [
     name: "miaomiao",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/filtration/miaomiao.vue"),
+  },
+  {
+    path: "/vuemap_vue_amap",
+    name: "vuemap_vue_amap",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/vuemap/vuemap_vue_amap.vue"),
+  },
+  {
+    path: "/watermarking",
+    name: "vuemap_vue_amap",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/watermarking/index.vue"),
+  },
+  {
+    path: "/lineDemo",
+    name: "lineDemo",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/line-demo/index.vue"),
+  },
+  {
+    path: "/time",
+    name: "time",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/time/index.vue"),
+  },
+  {
+    path: "/jsplumb",
+    name: "jsplumb",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/jsplumb/index.vue"),
+  },
+  {
+    path: "/ts",
+    name: "ts",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/ts/index.vue"),
   }
 ];
 
