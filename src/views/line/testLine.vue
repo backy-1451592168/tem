@@ -61,6 +61,7 @@ export default {
     // 离开页面时销毁所有line
     if(this.lines && this.lines.length){
       this.lines.forEach(line => {
+        console.log(line);
         line.remove()
       })
     }

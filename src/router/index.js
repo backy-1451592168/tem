@@ -159,6 +159,12 @@ const routes = [
       import(/* webpackChunkName: "dragging" */ "../views/line/indexCopy.vue"),
   },
   {
+    path: "/lineDome",
+    name: "lineDome",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/line/dome.vue"),
+  },
+  {
     path: "/elProgress",
     name: "elProgress",
     component: () =>
@@ -229,6 +235,12 @@ const routes = [
     name: "ts",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/ts/index.vue"),
+  },
+  {
+    path: "/elImageViewer",
+    name: "elImageViewer",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/elImageViewer/index.vue"),
   }
 ];
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="TreeRight" v-if="showTree">
+  <div class="TreeRight" v-if="showTree">sdass
     <div class="childs">
       <div class="child" v-for="(item,index) in list" :key="item.id +'-child-'+index">
         <div class="child-item" :style="{marginRight: item.children && item.children.length > 1 ? '20px' :''}">
@@ -82,6 +82,7 @@ export default {
     // 离开页面时销毁所有line
     if(this.lines && this.lines.length){
       this.lines.forEach(line => {
+        console.log(line);
         line.remove()
       })
     }

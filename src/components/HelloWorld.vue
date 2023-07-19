@@ -35,6 +35,7 @@
     <el-button type="success" plain><router-link to="/time">28.time</router-link></el-button>
     <el-button type="success" plain><router-link to="/jsplumb">29.jsplumb</router-link></el-button>
     <el-button type="success" plain><router-link to="/ts">29.ts</router-link></el-button>
+    <el-button type="success" plain><router-link to="/elImageViewer">30.element预览图片</router-link></el-button>
     <!-- 11.全屏 -->
     <quan-ping></quan-ping>
 
