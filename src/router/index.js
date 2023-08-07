@@ -241,6 +241,12 @@ const routes = [
     name: "elImageViewer",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/elImageViewer/index.vue"),
+  },
+  {
+    path: "/tree",
+    name: "tree",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/tree/index.vue"),
   }
 ];
 
