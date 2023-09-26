@@ -1,34 +1,90 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <script>
-      //动态改变font-size rem
-      (function(doc,win){
-        var docEI = doc.documentElement,
-        resizeEvt = 'orientationchange' in window?'orientataionchange':'resize',
-        recalc = function(){
-            var clientWidth = docEI.clientWidth;
-            if(!clientWidth) return;
-            //100是字体大小，1920是开发时浏览器窗口的宽度，等比计算
-            docEI.style.fontSize = 100*(clientWidth/1920)+'px';
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <script>
+    //动态改变font-size rem
+    (function (doc, win) {
+      var docEI = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientataionchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEI.clientWidth;
+          if (!clientWidth) return;
+          //100是字体大小，1920是开发时浏览器窗口的宽度，等比计算
+          docEI.style.fontSize = 100 * (clientWidth / 1920) + 'px';
         }
 
-        if(!doc.addEventListener) return;
-        win.addEventListener(resizeEvt, recalc, false);
-        doc.addEventListener('DOMContentLoaded', recalc, false);
-      })(document,window)
-    </script>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window)
+  </script>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #loading {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #000;
+    }
+
+    .loading {
+      display: flex;
+      color: #ffd04b;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .animated-text {
+      text-shadow: 0 1px #b6994a, 0 2px #b6994a, 0 3px #b6994a, 0 4px #b6994a, 0 5px #b6994a, 0 6px transparent, 0 7px transparent, 0 8px transparent, 0 9px transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+      transform: translateY(10px);
+      animation: bounce 0.3s ease infinite alternate;
+    }
+
+    @keyframes bounce {
+      to {
+        text-shadow: 0 1px transparent, 0 2px transparent, 0 3px transparent, 0 4px transparent, 0 5px transparent, 0 6px transparent, 0 7px transparent, 0 8px transparent, 0 9px transparent, 0 10px transparent, 0 50px 25px rgba(0, 0, 0, 0.2);
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 首次加载 动画 -->
+  <div id="app">
+    <div id="loading">
+      <div class="loading">
+        <span class="animated-text" style="animation-delay: 0s;">L</span><span class="animated-text"
+          style="animation-delay: 0.1s;">o</span><span class="animated-text"
+          style="animation-delay: 0.2s;">a</span><span class="animated-text"
+          style="animation-delay: 0.3s;">d</span><span class="animated-text"
+          style="animation-delay: 0.4s;">i</span><span class="animated-text"
+          style="animation-delay: 0.5s;">n</span><span class="animated-text"
+          style="animation-delay: 0.6s;">g</span><span class="animated-text"
+          style="animation-delay: 0.7s;">.</span><span class="animated-text"
+          style="animation-delay: 0.8s;">.</span><span class="animated-text" style="animation-delay: 0.9s;">.</span>
+      </div>
+    </div>
+  </div>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>

@@ -37,6 +37,10 @@
     <el-button type="success" plain><router-link to="/ts">29.ts</router-link></el-button>
     <el-button type="success" plain><router-link to="/elImageViewer">30.element预览图片</router-link></el-button>
     <el-button type="success" plain><router-link to="/tree">31.tree</router-link></el-button>
+    <el-button type="success" plain><router-link to="/lihua">32.分片上传(局部使用)</router-link></el-button>
+    <el-button type="success" plain><router-link to="/upload">33.分片上传(全局组件)</router-link></el-button>
+    <el-button type="success" plain><router-link to="/loading">34.loading</router-link></el-button>
+    <el-button type="success" plain><router-link to="/aa">34.AA</router-link></el-button>
     <!-- 11.全屏 -->
     <quan-ping></quan-ping>
 
@@ -57,10 +61,11 @@
 <script>
 // 父子组件通信 文件位置
 import testCom from '@/components/zujian/zi.vue'
+import globalUploader from '@/views/lihua/index.vue'
 export default {
   name: "HelloWorld",
   
-  components: { testCom },
+  components: { testCom, globalUploader },
   data() {
       return {
         message: 0,

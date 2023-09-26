@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import api from './api/api.js'
 
 // 引入elemen组件
 import ElementUI from 'element-ui'
@@ -23,8 +24,14 @@ import moment from 'moment'
 // filters
 import filters from '@/filters'
 
+// api  添加实例
+Vue.prototype.$api = api
+
 // 百度地图 npm install vue-baidu-map --save 
 // import BaiduMap from 'vue-baidu-map'
+
+// 分片上传
+import uploader from 'vue-simple-uploader'
 
 //使用全屏组件
 import quanPing from '@/components/quanping.vue'
@@ -51,6 +58,8 @@ Vue.use(ElementUI, {
 Vue.use(VueI18n)
 
 Vue.use(ViewUI)
+
+Vue.use(uploader)
 
 // moment
 Vue.prototype.$moment = moment

@@ -247,6 +247,30 @@ const routes = [
     name: "tree",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/tree/index.vue"),
+  },
+  {
+    path: "/lihua",
+    name: "lihua",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/lihua/index.vue"),
+  },
+  {
+    path: "/upload",
+    name: "upload",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/lihua/upload.vue"),
+  },
+  {
+    path: "/loading",
+    name: "loading",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/loading/index.vue"),
+  },
+  {
+    path: "/aa",
+    name: "aa",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/aa/index.vue"),
   }
 ];
 
