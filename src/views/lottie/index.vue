@@ -19,7 +19,7 @@ import lottie from 'lottie-web';
 // 本地导入
 // import sheepJson from '@/assets/81296-success.json';
 
-import { debounce, throttle } from '@/untils/index'
+import { debounce, throttle } from '@/utils/index'
 export default {
   name: 'lottie',
   components: {

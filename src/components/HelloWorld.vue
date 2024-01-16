@@ -32,6 +32,9 @@
     <el-button type="success" plain><router-link to="/vuemap_vue_amap">25.@vuemap/vue-amap</router-link></el-button>
     <el-button type="success" plain><router-link to="/watermarking">26.watermarking</router-link></el-button>
     <el-button type="success" plain><router-link to="/lineDemo">27.Line</router-link></el-button>
+    <el-button type="success" plain><router-link to="/dong">27-1.动态连线</router-link></el-button>
+    <el-button type="success" plain><router-link to="/propertyLine">27-2.动态连线</router-link></el-button>
+    <el-button type="success" plain><router-link to="/lineThree">27-3.动态连线</router-link></el-button>
     <el-button type="success" plain><router-link to="/time">28.time</router-link></el-button>
     <el-button type="success" plain><router-link to="/jsplumb">29.jsplumb</router-link></el-button>
     <el-button type="success" plain><router-link to="/ts">29.ts</router-link></el-button>
@@ -41,6 +44,9 @@
     <el-button type="success" plain><router-link to="/upload">33.分片上传(全局组件)</router-link></el-button>
     <el-button type="success" plain><router-link to="/loading">34.loading</router-link></el-button>
     <el-button type="success" plain><router-link to="/aa">34.AA</router-link></el-button>
+    <el-button type="success" plain><router-link to="/antv">35.阿里数据可视化-1</router-link></el-button>
+    <el-button type="success" plain><router-link to="/com">35.阿里数据可视化-2</router-link></el-button>
+    <el-button type="success" plain><router-link to="/drag">36.元素拖拽移动+滚轮缩放功能</router-link></el-button>
     <!-- 11.全屏 -->
     <quan-ping></quan-ping>
 

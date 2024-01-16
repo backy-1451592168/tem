@@ -165,6 +165,24 @@ const routes = [
       import(/* webpackChunkName: "dragging" */ "../views/line/dome.vue"),
   },
   {
+    path: "/dong",
+    name: "dong",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/line/dong.vue"),
+  },
+  {
+    path: "/lineThree",
+    name: "lineThree",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/line/lineThree/index.vue"),
+  },
+  {
+    path: "/propertyLine",
+    name: "propertyLine",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/line/propertyLine.vue"),
+  },
+  {
     path: "/elProgress",
     name: "elProgress",
     component: () =>
@@ -271,6 +289,24 @@ const routes = [
     name: "aa",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/aa/index.vue"),
+  },
+  {
+    path: "/antv",
+    name: "antv",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/antv/index.vue"),
+  },
+  {
+    path: "/com",
+    name: "com",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/antv/com.vue"),
+  },
+  {
+    path: "/drag",
+    name: "drag",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/drag/index.vue"),
   }
 ];
 

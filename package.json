@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@antv/g6": "^4.8.24",
     "@vuemap/vue-amap": "^0.1.14",
     "@zxing/library": "^0.18.6",
     "axios": "^0.21.1",
