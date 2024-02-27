@@ -1,5 +1,25 @@
 <template>
-  <div class="upload">
-    9
-  </div> 
+  <div>
+    <fragmentUpload @set-uploadData="setUploadData"></fragmentUpload>
+    {{uploadData}}
+  </div>
 </template>
+<script>
+import fragmentUpload from '@/components/fragmentUpload'
+
+export default {
+  components: {
+    fragmentUpload
+  },
+  data() {
+    return {
+      uploadData: {}
+    }
+  },
+  methods: {
+    setUploadData(data) {
+      this.uploadData = data;
+    }
+  }
+}
+</script>

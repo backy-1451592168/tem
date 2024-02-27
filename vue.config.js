@@ -52,49 +52,12 @@ module.exports = {
 
     // 配置多个代理
     proxy: {
-      "/dellapi": {
-        // target: "http://47.106.159.32:8080/",// 目标主机
-        target: "https://s1.z100.vip:39304/",
-        // target: "https://www.checkyyan.com/",
+      "/benDiApi": {
+        target: "http://192.168.170.63:7018/",
         ws: true, // 代理的WebSockets
         changeOrigin: true, // 允许websockets跨域
         pathRewrite: {
-          "^/dellapi": "/"
-        }
-      },
-      "/dellbdApi": {
-        target: "http://192.168.0.108:7018/",
-        ws: true, // 代理的WebSockets
-        changeOrigin: true, // 允许websockets跨域
-        pathRewrite: {
-          "^/dellbdApi/api": "/"
-        }
-      },
-      "/wljapi": {
-        // target: "http://47.106.159.32:8080/",// 目标主机
-        target: "https://s1.z100.vip:17296/",
-        // target: "https://www.checkyyan.com/",
-        ws: true, // 代理的WebSockets
-        changeOrigin: true, // 允许websockets跨域
-        pathRewrite: {
-          "^/wljapi": "/"
-        }
-      },
-      "/homeApi": {
-        target: "http://192.168.31.26:7018/",
-        // target: "http://192.168.6.121:7018/",
-        ws: true, // 代理的WebSockets
-        changeOrigin: true, // 允许websockets跨域
-        pathRewrite: {
-          "^/homeApi/api": "/"
-        }
-      },
-      "/gsApi": {
-        target: "http://192.168.170.120:7018/",
-        ws: true, // 代理的WebSockets
-        changeOrigin: true, // 允许websockets跨域
-        pathRewrite: {
-          "^/gsApi/api": "/"
+          "^/benDiApi/api": "/"
         }
       }
     },

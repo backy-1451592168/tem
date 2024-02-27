@@ -307,6 +307,12 @@ const routes = [
     name: "drag",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/drag/index.vue"),
+  },
+  {
+    path: "/search",
+    name: "search",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/search/index.vue"),
   }
 ];
 

@@ -86,7 +86,6 @@ import closeSvg from "./images/close.svg";
 import doneSvg from "./images/right.svg";
 import SparkMD5 from "spark-md5";
 import Promise from "bluebird";
-import axios from "axios";
 const blobSlice =
   File.prototype.slice || File.prototype.mozSlice || File.prototype.webkitSlice;
 const zipReg = new RegExp(/^.*(?<=(zip|rar|tar))$/);

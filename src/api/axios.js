@@ -5,11 +5,7 @@ import { Message } from 'element-ui'
 // 开发环境
 let BASE_URL
 if (process.env.NODE_ENV === "development") {
-  // BASE_URL = '/wljapi'
-  // BASE_URL = '/dellbdApi'
-  // BASE_URL = '/dellapi'
-  // BASE_URL = '/homeApi'
-  BASE_URL = '/gsApi'
+  BASE_URL = '/benDiApi'
 } else {
   // BASE_URL = ''
   BASE_URL = 'https://s1.z100.vip:39304/'
