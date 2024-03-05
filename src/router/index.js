@@ -276,7 +276,7 @@ const routes = [
     path: "/upload",
     name: "upload",
     component: () =>
-      import(/* webpackChunkName: "dragging" */ "../views/lihua/upload.vue"),
+      import(/* webpackChunkName: "dragging" */ "../views/upload/index.vue"),
   },
   {
     path: "/loading",

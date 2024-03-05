@@ -5,15 +5,23 @@
       <el-button type="primary" size="small" @click="upload">上传</el-button>
       <div v-if="uploadSuccess">上传成功</div>
     </div>
+    <global-uploader :url="url" />
   </div>
 </template>
 
 <script>
 import Bus from '/vue-simple-uploader/js/bus'
-
+import GlobalUploader from '/vue-simple-uploader/GlobalUploader'
 export default {
-  name: 'home',
-
+  name: 'fragmentUpload',
+  components: {
+    GlobalUploader
+  },
+  props: {
+    url: {
+      type: String
+    }
+  },
   data() {
     return {
       fileList: [],

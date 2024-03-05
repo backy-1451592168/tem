@@ -1,6 +1,6 @@
 <template>
   <div>
-    <fragmentUpload @set-uploadData="setUploadData"></fragmentUpload>
+    <fragmentUpload @set-uploadData="setUploadData" url="https://s1.z100.vip:15139/fragment_upload"></fragmentUpload>
     {{uploadData}}
   </div>
 </template>

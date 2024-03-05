@@ -1,6 +1,7 @@
 <template>
   <!-- 分片上传组件 -->
   <div id="global-uploader" :class="{ 'global-uploader-single': !global }">
+    {{url}}
     <!-- 上传 -->
     <uploader
       ref="uploader"
@@ -82,7 +83,12 @@ import SparkMD5 from "spark-md5";
 import { mergeSimpleUpload } from "@/api";
 
 export default {
+  name: 'global-uploader',
   props: {
+    // 上传地址
+    url: {
+      type: String
+    },
     global: {
       type: Boolean,
       default: true,
@@ -100,7 +106,8 @@ export default {
     return {
       initOptions: {
         // target: "http://localhost:3168/fragment_upload",
-        target: "	https://s1.z100.vip:15139/fragment_upload",
+        // target: "https://s1.z100.vip:15139/fragment_upload",
+        target: "",
         chunkSize: "2048000",
         fileParameterName: "file",
         maxChunkRetries: 3,
@@ -139,6 +146,11 @@ export default {
       customParams: {},
       customStatus: "",
     };
+  },
+
+  created() {
+    // 获取上传地址
+    this.initOptions.target = this.url;
   },
 
   watch: {

@@ -26,7 +26,6 @@ export default {
       menuData: []
     };
   },
-  mounted() {},
   watch: {
     searchQuery(val) {
       this.$refs.tree.filter(val);

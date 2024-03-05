@@ -6,17 +6,17 @@
     >
     <router-view />
     <!-- 将上传组件全局注册 -->
-    <global-uploader />
+    <!-- <global-uploader /> -->
   </div>
 </template>
 
 <script>
-import GlobalUploader from '/vue-simple-uploader/GlobalUploader'
+// import GlobalUploader from '/vue-simple-uploader/GlobalUploader'
 
 export default {
   name: 'app',
   components: {
-    GlobalUploader
+    // GlobalUploader
   },
   data() {
     return {

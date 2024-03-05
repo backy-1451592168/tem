@@ -33,7 +33,7 @@ export default {
         list: [
           {name: '拖拽组件 全屏', url: '/dragging'},
           {name: '中英文切换', url: '/zhen'},
-          {name: 'element组件', url: '/dragging'},
+          {name: 'element组件', url: '/element'},
           {name: '时间组件 扫码组件 一键复制时间 声音 桌面消息通知', url: '/moment'},
           {name: '视频插件', url: '/videoPage'},
           {name: 'chart图表', url: '/chart'},
