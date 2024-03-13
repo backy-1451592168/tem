@@ -78,7 +78,8 @@ export default {
           {name: '阿里数据可视化-1', url: '/antv'},
           {name: '阿里数据可视化-2', url: '/com'},
           {name: '元素拖拽移动+滚轮缩放功能', url: '/drag'},
-          {name: '模糊搜索', url: '/search'}
+          {name: '模糊搜索', url: '/search'},
+          {name: 'G6-思维导图', url: '/mindMap'},
         ]
       }
   },

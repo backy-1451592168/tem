@@ -313,6 +313,12 @@ const routes = [
     name: "search",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/search/index.vue"),
+  },
+  {
+    path: "/mindMap",
+    name: "mindMap",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/mindMap/index.vue"),
   }
 ];
 
