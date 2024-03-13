@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       colorArr: [
-        "#5B8FF9",
+        "#ff7e9a",
         "#5AD8A6",
         "#5D7092",
         "#F6BD16",
@@ -158,12 +158,12 @@ export default {
           <group>
           <rect>
             <rect style={{
-              width: 150,
+              width: 151,
               height: 20,
-              fill: ${cfg.color},
+              fill: fill,
               radius: [6, 6, 0, 0],
               cursor: 'move'，
-              stroke: ${cfg.color}
+              stroke: #000000
             }} draggable="true">
               <text style={{
                 marginTop: 2,
@@ -175,7 +175,7 @@ export default {
             <rect style={{
               width: 150,
               height: 55,
-              stroke: ${cfg.color},
+              stroke: #000000,
               fill: #ffffff,
               radius: [0, 0, 6, 6],
             }}>
@@ -184,13 +184,13 @@ export default {
             </rect>
           </rect>
           <circle style={{
-            stroke: ${cfg.color},
+            stroke: #000000,
             r: 10,
             fill: '#fff',
             marginLeft: 75,
             cursor: 'pointer'
           }} name="circle">
-            <image style={{ img: 'https://preview.cloud.189.cn/image/imageAction?param=76980FD57B5BE356B7B4565D24FFA36C407389C071C1416EB5897AC2FCA1BDBE5E18E5C6D2D12AD1655AE6A92661DBC8324082175217E55A3A9A53CC3307455221131F21888080EBA51666788D7B6831E2C529F4A870CCFC75ABABFBBD6F70DA7C7A8448C33FE2E8E19CAD3698E70B4F', width: 12, height: 12,  marginLeft: 70,  marginTop: -5 }} />
+            <image style={{ img: 'https://preview.cloud.189.cn/image/imageAction?param=AC5A659B54C55177BF5538507BB0B63B7C68FF902EAD9B62E6C1C11D842ECDE3690788C747E8E273DF4475C1B670AC2D0B20E3F4EFFF2C6805F211A29B190CF48534E97D80BD2AB53C0870932886F219CB17BF905803BA9157294B47A5F34D363BDB5960FB5D57E71163B0ED3794C682', width: 12, height: 12,  marginLeft: 70,  marginTop: -5 }} />
           </circle>
         </group>`;
       },
@@ -203,11 +203,14 @@ export default {
       height: vm.height,
       pixelRatio: 2,
       modes: {
-        default: ["drag-canvas", "zoom-canvas", "drag-node"],
+        default: ["drag-canvas", "zoom-canvas", "drag-node", "activate-relations"],
       },
       // 节点类型及样式
       defaultNode: {
         type: "rect-xml",
+        // style: {
+        //   // stroke: "#0092ff",
+        // },
       },
       // 连线类型及样式
       defaultEdge: {
@@ -215,6 +218,7 @@ export default {
         // polyline
         style: {
           stroke: "#0092ff",
+          lineWidth: 2
         },
       },
       //布局
@@ -240,18 +244,36 @@ export default {
         },
       },
     });
-    // graph.node(function (node) {
-    //   // depth 类似节点标识
-    //   return {
-    //     // size:[100,60],
-    //     style: {
-    //       fill: vm.colorArr[node.depth], //背景色
-    //       stroke: "#005ff2", //边框
-    //     },
-    //     label: node.label,
-    archive: 'redis',
-    //   };
-    // });
+
+    graph.node(function (node) {
+      // depth 类似节点标识
+      return {
+        style: {
+          // fill: vm.colorArr[node.depth], //背景色
+          stroke: "#005ff2", //边框
+        },
+        stateStyles: {
+          hover: {
+            fill: '#0099e3', // 设置鼠标悬停时的填充颜色
+          }
+        },
+        label: node.label,
+        archive: 'redis',
+      };
+    });
+    graph.on('node:click', evt => {
+      console.log(evt.item._cfg.id);
+    })
+
+    graph.on('node:mouseenter', evt => {
+      const item = evt.item;
+      graph.setItemState(item, 'hover', true); // 添加 hover 状态
+    });
+
+    graph.on('node:mouseleave', evt => {
+      const item = evt.item;
+      graph.setItemState(item, 'hover', false); // 移除 hover 状态
+    });
     graph.data(this.data);
     graph.render();
     graph.fitView();

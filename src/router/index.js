@@ -319,6 +319,12 @@ const routes = [
     name: "mindMap",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/mindMap/index.vue"),
+  },
+  {
+    path: "/mindMap2",
+    name: "mindMap2",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/mindMap/index2.vue"),
   }
 ];
 
