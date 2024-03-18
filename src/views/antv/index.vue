@@ -459,7 +459,7 @@ export default {
 <style>
 #mountNode {
   width: 100%;
-  height: 500px;
+  height: 800px;
 }
 </style>
 
