@@ -57,7 +57,7 @@ export default {
           {name: 'elProgress', url: '/elProgress'},
           {name: 'testLine', url: '/testLine'},
           {name: 'echarts-map', url: '/echartsMap'},
-          {name: 'echarts-map', url: '/test'},
+          {name: 'test', url: '/test'},
           {name: 'filtration-jiao', url: '/filtration'},
           {name: 'miaomiao', url: '/filtration-miaomiao'},
           {name: '@vuemap/vue-amap', url: '/vuemap_vue_amap'},
@@ -81,6 +81,7 @@ export default {
           {name: '模糊搜索', url: '/search'},
           {name: 'G6-流程图', url: '/mindMap'},
           {name: 'G6-流程作业图', url: '/mindMap2'},
+          {name: '旋转大屏', url: '/rotatingLargeScreen'}
         ]
       }
   },

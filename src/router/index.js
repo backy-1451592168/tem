@@ -325,6 +325,12 @@ const routes = [
     name: "mindMap2",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/mindMap/index2.vue"),
+  },
+  {
+    path: "/rotatingLargeScreen",
+    name: "rotatingLargeScreen",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/rotatingLargeScreen/index.vue"),
   }
 ];
 

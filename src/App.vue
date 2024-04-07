@@ -1,10 +1,13 @@
 <template>
   <div id="app">
-    <Button type="dashed"><router-link to="/">Home </router-link></Button>
-    <Button type="dashed"
-      ><router-link to="/about">富文本框</router-link></Button
-    >
-    <router-view />
+    <div class="header">
+      <Button type="dashed"><router-link to="/">Home </router-link></Button>
+      <Button type="dashed"><router-link to="/about">富文本框</router-link></Button>
+      <quan-ping></quan-ping>
+    </div>
+    <div class="router-view">
+      <router-view />
+    </div>
     <!-- 将上传组件全局注册 -->
     <!-- <global-uploader /> -->
   </div>
@@ -38,6 +41,18 @@ export default {
 //   @import "./scss/font-family.scss";
 </style>
 <style lang="scss">
+.header {
+  display: flex;
+}
+.router-view {
+  height: calc(100vh - 32px);
+  width: 100%;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0px !important; /* 滚动条宽度， width：对应竖滚动条的宽度  height：对应横滚动条的高度*/
+  }
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
