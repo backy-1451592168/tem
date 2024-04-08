@@ -331,6 +331,12 @@ const routes = [
     name: "rotatingLargeScreen",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/rotatingLargeScreen/index.vue"),
+  },
+  {
+    path: "/richText",
+    name: "richText",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/richText/index.vue"),
   }
 ];
 
