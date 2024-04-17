@@ -1,3 +1,5 @@
+## 放到res外，就是全局的了 但是必须在`App.vue`注册
+
 # 基于`vue-simple-uploader`封装插件
 
 `GlobalUploader.vue` 为基于 `vue-simple-uploader` 二次封装的上传插件

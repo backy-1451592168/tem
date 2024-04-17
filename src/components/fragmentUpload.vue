@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import Bus from '/vue-simple-uploader/js/bus'
-import GlobalUploader from '/vue-simple-uploader/GlobalUploader'
+import Bus from '@/components/vue-simple-uploader/js/bus'
+import GlobalUploader from '@/components/vue-simple-uploader/GlobalUploader'
 export default {
   name: 'fragmentUpload',
   components: {
