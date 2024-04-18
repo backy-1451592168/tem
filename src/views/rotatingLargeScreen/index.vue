@@ -3,6 +3,7 @@
     <div class="bg">
       <div class="bg-group"></div>
       <!-- 4个图x和y轴动画加起来是20s , 20s/4 等于 5s 每个球y轴动画延迟 从0递减5s,x轴与y轴相差动画时长的一半（10s/2）-->
+
       <div class="rotate">
         <div
           @mouseover="mouseover"
@@ -27,6 +28,22 @@
           @click="goPage(item.name)"
         >
           <div class="rotate-item-header">{{ item.meta.title }} </div>
+          <div class="popover">
+            <ul class="card">
+              <li class="item">
+                数据表管理
+              </li>
+              <li class="item">
+                家宽装维服务质量分析报表析报表
+              </li>
+              <li class="item">
+                家宽数据质量校验分析
+              </li>
+              <li class="item">
+                数据表管理
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -165,7 +182,13 @@ export default {
       }
       &:hover {
         background-image: url("~@/assets/img/tubiao1.png");
-        font-size: 20px;
+        // font-size: 19px;
+        .rotate-item-header {
+          color: #FFBA27;
+        }
+        .popover {
+          opacity: 1;
+        }
       }
       .rotate-item-header {
         min-width: 200px;
@@ -180,6 +203,38 @@ export default {
     .rotate-item-active {
       background-image: url("~@/assets/img/8.png");
       font-size: 20px;
+    }
+    
+    .popover {
+      opacity: 0;
+      position: absolute;
+      top: 80px;
+      transform: translateX(-30%);
+      min-width: 360px;
+      min-height: 70px;
+      .card {
+        padding-top: 4px;
+        width: 100%;
+        .item {
+          height: 36px;
+          line-height: 28px;
+          color: #C9DFFF;
+          font-size: 13.5px;
+          padding: 4px 8px;
+          // margin: 4px 0;
+          width: 50%;
+          display: inline-block;
+          transform: skew(5deg);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space:nowrap;
+          background: linear-gradient( 86deg, rgba(37,170,255,0) 0%, rgba(37,170,255,0.45) 6%, rgba(37,170,255,0.72) 11%, rgba(37,170,255,0.89) 15%, #25AAFF 21%, rgba(37,170,255,0) 100%);
+          &:hover {
+            color: #FFBA27;
+            font-size: 14.5px;
+          }
+        }
+      }
     }
   }
 </style>

@@ -59,6 +59,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
   color: #2c3e50;
+  ul, li {
+    list-style: none;
+  }
 }
 
 #nav {
