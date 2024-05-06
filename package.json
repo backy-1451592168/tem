@@ -17,6 +17,7 @@
     "echarts": "^4.9.0",
     "element-ui": "^2.15.1",
     "fuse.js": "^7.0.0",
+    "html2canvas": "^1.4.1",
     "interactjs": "^1.10.17",
     "jsbarcode": "^3.11.5",
     "jsplumb": "^2.15.6",

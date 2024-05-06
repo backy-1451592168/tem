@@ -28,7 +28,7 @@
           @click="goPage(item.name)"
         >
           <div class="rotate-item-header">{{ item.meta.title }} </div>
-          <div class="popover">
+          <!-- <div class="popover">
             <ul class="card">
               <li class="item">
                 数据表管理
@@ -43,7 +43,7 @@
                 数据表管理
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -60,7 +60,7 @@ export default {
   },
   data() {
     return {
-      duration: 30, // 路由旋转动画总时长
+      duration: 40, // 路由旋转动画总时长
       routeList: [
         {
           name: "parkProfile",
@@ -97,6 +97,16 @@ export default {
             title: "事件统计",
           },
         },
+        {
+          name: "platformArchitecture",
+          meta: { title: "平台架构" },
+        },
+        {
+          name: "energyMonitor",
+          meta: {
+            title: "能耗监测",
+          },
+        }
       ],
     };
   },
@@ -105,12 +115,13 @@ export default {
   mounted() {},
   methods: {
     goPage(url) {
-      if (url !== this.pagePath && url) {
+      // if (url !== this.pagePath && url) {
         this.$router.push({
           name: url,
         });
-      }
+      // }
     },
+    // 暂停
     mouseover() {
       Array.from(document.getElementsByClassName("rotate-item")).forEach(
         (element) => {
@@ -119,6 +130,7 @@ export default {
         }
       );
     },
+    // 运行
     mouseout() {
       Array.from(document.getElementsByClassName("rotate-item")).map(
         (element) => {
@@ -143,13 +155,13 @@ export default {
     }
     .bg-group {
       position: absolute;
-      top: calc(25%);
-      left: 6.9rem;
+      top: calc(20%);
+      left: 7rem;
       width: 5rem;
-      height: 50%;
+      height: 55%;
       background-image: url("~@/assets/img/bg-group.png");
       background-size: 100% 100%;
-      z-index: 10020;
+      z-index: 20;
     }
 
     .rotate {
@@ -159,16 +171,23 @@ export default {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 10010;
+      z-index: 10;
       .rotate-item {
         position: absolute;
-        z-index: 10086;
+        z-index: 86;
+        &:hover {
+          .popover {
+            opacity: 1;
+            min-width: 360px;
+            min-height: 70px;
+          }
+        }
       }
     }
     .rotate-item {
       cursor: pointer;
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       font-size: 18px;
       background-image: url("~@/assets/img/tubiao1.png");
       background-size: 100% 100%;
@@ -185,9 +204,6 @@ export default {
         // font-size: 19px;
         .rotate-item-header {
           color: #FFBA27;
-        }
-        .popover {
-          opacity: 1;
         }
       }
       .rotate-item-header {
@@ -206,12 +222,13 @@ export default {
     }
     
     .popover {
+      z-index: 1008;
       opacity: 0;
       position: absolute;
-      top: 80px;
+      top: 70px;
       transform: translateX(-30%);
-      min-width: 360px;
-      min-height: 70px;
+      width: 10px;
+      height: 10px;
       .card {
         padding-top: 4px;
         width: 100%;
@@ -228,7 +245,8 @@ export default {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space:nowrap;
-          background: linear-gradient( 86deg, rgba(37,170,255,0) 0%, rgba(37,170,255,0.45) 6%, rgba(37,170,255,0.72) 11%, rgba(37,170,255,0.89) 15%, #25AAFF 21%, rgba(37,170,255,0) 100%);
+          background-color: #000;
+          // background: linear-gradient( 86deg, rgba(37,170,255,0) 0%, rgba(37,170,255,0.45) 6%, rgba(37,170,255,0.72) 11%, rgba(37,170,255,0.89) 15%, #25AAFF 21%, rgba(37,170,255,0) 100%);
           &:hover {
             color: #FFBA27;
             font-size: 14.5px;

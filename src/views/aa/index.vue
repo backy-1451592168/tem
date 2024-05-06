@@ -1,7 +1,7 @@
 <template>
   <div class="aa">
     <el-card class="box-card">
-      <p class="title">阿九专属记账系统</p>
+      <p class="title">w记账系统</p>
       <el-card class="box-card">
         <div class="detail">
           <div>清单：</div>

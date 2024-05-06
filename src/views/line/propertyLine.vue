@@ -1,7 +1,7 @@
 <template>
   <div class="propertyLine">
     <div class="backtrack">
-      <p class="name">返回</p>
+      <p class="name" @click="goHome()">返回</p>
     </div>
     <div class="link-information">
       <div class="link-information-container">
@@ -29,6 +29,8 @@
 <script>
 import { debounce } from '@/utils/index.js';
 import LeaderLine from 'leader-line-vue';
+// html 生成 canvas 海报
+import html2canvas from 'html2canvas';
 export default {
   data() {
     return {
@@ -77,6 +79,11 @@ export default {
     );
   },
   methods: {
+    goHome() {
+      html2canvas(document.documentElement).then(function(canvas) {
+          document.body.appendChild(canvas);
+      });
+    },
     clearLeaderLine() {
       let parentNode = document.getElementsByClassName('link-information')[0];
       let targetNode = document.getElementById('link-information-wrapper');
