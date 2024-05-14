@@ -83,7 +83,8 @@ export default {
           {name: 'G6-流程图', url: '/mindMap'},
           {name: 'G6-流程作业图', url: '/mindMap2'},
           {name: '旋转大屏', url: '/rotatingLargeScreen'},
-          {name: '富文本-quill', url: '/richText'}
+          {name: '富文本-quill', url: '/richText'},
+          {name: 'echarts集合', url: '/echarts'},
         ]
       }
   },

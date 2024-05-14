@@ -343,6 +343,12 @@ const routes = [
     name: "richText",
     component: () =>
       import(/* webpackChunkName: "dragging" */ "../views/richText/index.vue"),
+  },
+  {
+    path: "/echarts",
+    name: "echarts",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/echarts/index.vue"),
   }
 ];
 
