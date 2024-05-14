@@ -183,6 +183,12 @@ const routes = [
       import(/* webpackChunkName: "dragging" */ "../views/line/propertyLine.vue"),
   },
   {
+    path: "/lineChart",
+    name: "lineChart",
+    component: () =>
+      import(/* webpackChunkName: "dragging" */ "../views/line/lineChart.vue"),
+  },
+  {
     path: "/elProgress",
     name: "elProgress",
     component: () =>

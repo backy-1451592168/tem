@@ -81,7 +81,7 @@ export default {
   methods: {
     goHome() {
       html2canvas(document.documentElement).then(function(canvas) {
-          document.body.appendChild(canvas);
+        document.body.appendChild(canvas);
       });
     },
     clearLeaderLine() {
@@ -107,6 +107,7 @@ export default {
               const end = 'end' + lineIndex;
               const line = 'line' + lineIndex;
               const elmLin = 'elmLin' + lineIndex;
+              console.log(arr.id);
               obj[start] = document.getElementById(arr.id);
               obj[end] = document.getElementById(item);
       

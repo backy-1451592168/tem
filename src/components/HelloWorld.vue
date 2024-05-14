@@ -66,6 +66,7 @@ export default {
           {name: '1.动态连线', url: '/dong'},
           {name: '2.动态连线', url: '/propertyLine'},
           {name: '3.动态连线', url: '/lineThree'},
+          {name: '4.动态连线', url: '/lineChart'},
           {name: 'time', url: '/time'},
           {name: 'jsplumb', url: '/jsplumb'},
           {name: 'ts', url: '/ts'},
