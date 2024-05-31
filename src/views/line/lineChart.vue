@@ -3,7 +3,7 @@
     <div class="piece" v-for="(item, i) in nodes" :key="i">
       <div class="br one-level" :id="item.id">{{item.id}}</div>
       <div class="gross">
-        <div class="child" v-for="elem in item.child" :key="elem.id">
+        <div class="child" v-for="elem in item.children" :key="elem.id">
           <div class="br two-level" v-for="data in elem" :key="data.id" :id="data.id">{{data.id}}</div>
         </div>
       </div>
@@ -14,8 +14,6 @@
 <script>
 import { debounce } from '@/utils/index.js';
 import LeaderLine from 'leader-line-vue';
-// html 生成 canvas 海报
-import html2canvas from 'html2canvas';
 export default {
   data() {
     return {
@@ -23,7 +21,7 @@ export default {
         {
           id: 'A',
           title: 'A',
-          child: [
+          children: [
             [
               {id: 'A1', title: 'A1', links: {start: 'A', end: 'A1'}},
               {id: 'A2', title: 'A2', links: {start: 'A1', end: 'A2'}},
@@ -44,7 +42,7 @@ export default {
         {
           id: 'AA',
           title: 'AA',
-          child: [
+          children: [
             [
               {id: 'AA1', title: 'AA1', links: {start: 'AA', end: 'AA1'}},
               {id: 'AA2', title: 'AA2', links: {start: 'AA1', end: 'AA2'}},
@@ -79,11 +77,6 @@ export default {
     );
   },
   methods: {
-    goHome() {
-      html2canvas(document.documentElement).then(function(canvas) {
-          document.body.appendChild(canvas);
-      });
-    },
     clearLeaderLine() {
       let parentNode = document.getElementsByClassName('link-information')[0];
       let targetNode = document.getElementById('link-information-wrapper');
@@ -100,7 +93,7 @@ export default {
 
       let lineIndex = 1; // 初始化连接线索引
       this.nodes.forEach((elem, i) => {
-        elem.child.forEach((arr, ii) => {
+        elem.children.forEach((arr, ii) => {
           arr.forEach((data, iii) => {
             const start = 'start' + lineIndex;
             const end = 'end' + lineIndex;
@@ -131,7 +124,7 @@ export default {
 
       let elmLineIndex = 1;
       this.nodes.forEach((elem, i) => {
-        elem.child.forEach((arr, ii) => {
+        elem.children.forEach((arr, ii) => {
           arr.forEach((data, iii) => {
             elmWrapper.appendChild(obj['elmLin' + elmLineIndex]);
             elmLineIndex++; // 递增连接线索引
